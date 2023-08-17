@@ -10,7 +10,8 @@ public class PaymentSlip {
 	private long boletoNum;
 	/* private ??? boletoCodBarra; */ /* foto do cod de barra no sistema para pagar na mesma hora */
 	private boolean boletoStatus;/*
-									 * todo boleto iniciar como false/nao pago, adicionar opcao de marcar como pago
+									 * todo boleto iniciar como false/nao pago, sempre q executado perguntar se o
+									 * boleto foi pago, caso sim, remover da lista, caso nao manter na lista
 									 */
 
 	public String getBoletoDis() {
@@ -33,7 +34,7 @@ public class PaymentSlip {
 		return boletoValor;
 	}
 
-	public void setBoletoValor(double boletoValor) {
+	public void setBoletoValor(int boletoValor) {
 		this.boletoValor = boletoValor;
 	}
 
