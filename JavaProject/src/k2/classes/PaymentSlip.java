@@ -10,7 +10,7 @@ public class PaymentSlip {
 	private long boletoNum;
 	/* private ??? boletoCodBarra; */ /* foto do cod de barra no sistema para pagar na mesma hora */
 	private boolean boletoStatus;/*
-									 * todo boleto iniciar como false/nao pago, sempre q executado perguntar se o
+									 * todo boleto iniciar como boolean false/nao pago, sempre q executado perguntar se o
 									 * boleto foi pago, caso sim, remover da lista, caso nao manter na lista
 									 */
 

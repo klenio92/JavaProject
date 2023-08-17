@@ -37,10 +37,9 @@ public class K2 {
 			cliente.setKmCarro(Integer.valueOf(kmCarro));
 			cliente.setPlacaCarro(placaCarro);
 
-			System.out.println(cliente.toString()); /*
-													 * usar 2 opcoes para cadastrar ou um boleto ou um cliente/carro e
-													 * depois prosseguir para opcoes
-													 */
+			System.out.println(cliente.toString()); /* objetivo futuro: dar opcao de cadastro novamente usando while no code*/
+													 
+													
 
 		}
 		if (box1 == 1) {
@@ -59,7 +58,7 @@ public class K2 {
 
 		}
 		if (box1 == 2) {
-			System.out.println("Deu certo!");
+			System.out.println("Ty!");
 		}
 	}
 }
