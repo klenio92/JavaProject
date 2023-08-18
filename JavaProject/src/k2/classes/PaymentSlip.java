@@ -1,5 +1,7 @@
 package k2.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class PaymentSlip {
@@ -10,9 +12,16 @@ public class PaymentSlip {
 	private long boletoNum;
 	/* private ??? boletoCodBarra; */ /* foto do cod de barra no sistema para pagar na mesma hora */
 	private boolean boletoStatus;/*
-									 * todo boleto iniciar como boolean false/nao pago, sempre q executado perguntar se o
-									 * boleto foi pago, caso sim, remover da lista, caso nao manter na lista
+									 * todo boleto iniciar como boolean false/nao pago, sempre q executado perguntar
+									 * se o boleto foi pago, caso sim, remover da lista, caso nao manter na lista
 									 */
+	/*
+	 * private List<PaymentSlip> boletos = new ArrayList<PaymentSlip>();
+	 * 
+	 * public List<PaymentSlip> getBoletos() { return boletos; }
+	 * 
+	 * public void setBoletos(List<PaymentSlip> boletos) { this.boletos = boletos; }
+	 */
 
 	public String getBoletoDis() {
 		return boletoDis;

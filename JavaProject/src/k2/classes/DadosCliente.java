@@ -1,13 +1,11 @@
 package k2.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class DadosCliente {
 
-	/*
-	 * caso necessario no futuro sera criada uma classe para carro separada do
-	 * cliente
-	 */
 	private String nome;
 	private String cpf;
 	private String numCelular;
@@ -18,6 +16,15 @@ public class DadosCliente {
 	private String placaCarro;
 	private int kmCarro;
 	private int anoCarro;
+
+	/*
+	 * private List<DadosCliente> clientes = new ArrayList<DadosCliente>();
+	 * 
+	 * public List<DadosCliente> getClientes() { return clientes; }
+	 * 
+	 * public void setClientes(List<DadosCliente> clientes) { this.clientes =
+	 * clientes; }
+	 */
 
 	public String getNome() {
 		return nome;
