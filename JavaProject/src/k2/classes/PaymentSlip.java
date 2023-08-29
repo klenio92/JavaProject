@@ -7,21 +7,20 @@ import java.util.Objects;
 public class PaymentSlip {
 
 	private String boletoDis;
-	private String boletoPrazo; /* puxar no dia quando um boleto estiver na data de vencimento */
+	private String boletoPrazo;
 	private int boletoValor;
 	private long boletoNum;
-	/* private ??? boletoCodBarra; */ /* foto do cod de barra no sistema para pagar na mesma hora */
-	private boolean boletoStatus;/*
-									 * todo boleto iniciar como boolean false/nao pago, sempre q executado perguntar
-									 * se o boleto foi pago, caso sim, remover da lista, caso nao manter na lista
-									 */
-	/*
-	 * private List<PaymentSlip> boletos = new ArrayList<PaymentSlip>();
-	 * 
-	 * public List<PaymentSlip> getBoletos() { return boletos; }
-	 * 
-	 * public void setBoletos(List<PaymentSlip> boletos) { this.boletos = boletos; }
-	 */
+	private boolean boletoStatus;
+
+	private List<PaymentSlip> boletos = new ArrayList<PaymentSlip>();
+
+	public List<PaymentSlip> getBoletos() {
+		return boletos;
+	}
+
+	public void setBoletos(List<PaymentSlip> boletos) {
+		this.boletos = boletos;
+	}
 
 	public String getBoletoDis() {
 		return boletoDis;
@@ -85,7 +84,9 @@ public class PaymentSlip {
 	@Override
 	public String toString() {
 		return "PaymentSlip [boletoDis=" + boletoDis + ", boletoPrazo=" + boletoPrazo + ", boletoValor=" + boletoValor
-				+ ", boletoNum=" + boletoNum + ", boletoStatus=" + boletoStatus + "]";
+				+ "]";
 	}
 
+	public void remove(String boletoStatus2) {
+	}
 }

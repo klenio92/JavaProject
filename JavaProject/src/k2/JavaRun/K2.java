@@ -8,8 +8,9 @@ import k2.classes.PaymentSlip;
 import k2.classes.DadosCliente;
 
 public class K2 {
-
 	public static void main(String[] args) {
+
+		K2Tela k2Tela = new K2Tela();
 
 		String[] options = { "Cadastrar novo cliente", "Registrar novo boleto", "Cancelar" };
 		int box1 = JOptionPane.showOptionDialog(null, "Escolha uma opção:", "CADASTRO", 0, JOptionPane.QUESTION_MESSAGE,
@@ -52,25 +53,40 @@ public class K2 {
 		if (box1 == 1) {
 
 			for (int qtd = 1; qtd <= 3; qtd++) {
-				List<PaymentSlip> boletos = new ArrayList<PaymentSlip>();
+				/*
+				 * List<PaymentSlip> boletos = new ArrayList<PaymentSlip>(); TESTANDO COLOCAR
+				 * LISTA DENTRO DA CLASSE PaymentSlip
+				 */
 				String boletoDis = JOptionPane.showInputDialog("Qual o distribuidor do boleto?");
 				String boletoPrazo = JOptionPane.showInputDialog("Qual o vencimento do boleto?");
 				String boletoValor = JOptionPane.showInputDialog("Qual o valor do boleto?");
 
 				PaymentSlip boleto = new PaymentSlip();
-
 				boleto.setBoletoDis(boletoDis);
 				boleto.setBoletoPrazo(boletoPrazo);
 				boleto.setBoletoValor(Integer.valueOf(boletoValor).intValue());
 
-				boletos.add(boleto);
-				for (PaymentSlip paymentSlip : boletos) {
+				boleto.getBoletos().add(boleto);
+				for (PaymentSlip paymentSlip : boleto.getBoletos()) {
 					System.out.println(paymentSlip);
 				}
+				/*
+				 * int box2 = JOptionPane.showConfirmDialog(null,
+				 * "Deseja remover um boleto da lista de pendencia?"); if(box2 == 0) {
+				 * 
+				 * for (PaymentSlip paymentSlip : boleto.getBoletos()) { String boletoStatus =
+				 * JOptionPane.showInputDialog("Qual boleto listado voce deseja remover?");
+				 * boleto.getBoletos(); boleto.remove(boletoStatus);
+				 * System.out.println(paymentSlip); } **CODIGO REMOVER BOLETO que sera ajustado
+				 * e funcionara melhor no futuro** }
+				 */
+
 			}
 			if (box1 == 2) {
 				System.out.println("Ty!");
 			}
+
 		}
+
 	}
 }
